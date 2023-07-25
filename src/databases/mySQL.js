@@ -19,7 +19,7 @@ function mysqlConnect() {
             }
         });
     } catch (err) {
-        console.log("loi cu phap:");
+        console.log("loi cu phap123567:");
     }
 }
 
