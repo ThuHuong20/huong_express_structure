@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            p {
+                text-align: center;
+                color: pink;
+                font: bold 54px Arial, sans-serif;
+                -webkit-text-stroke: 2px black;
+                text-stroke: 2px black;
+            }
+
+            #container {
+                width: 100%;
+                height: 370px;
+                position: absolute;
+                bottom: 0px;
+                overflow: hidden;
+            }
+
+            #head {
+                width: 500px;
+                height: 500px;
+                background: pink;
+                border: 4px solid #000;
+                border-radius: 50%;
+                position: absolute;
+                bottom: -250px;
+                left: 50%;
+                margin: 0 0 0 -250px;
+                z-index: 1;
+            }
+
+            #nose {
+                border: 4px solid #000;
+                width: 300px;
+                height: 180px;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 140px;
+                left: 50%;
+                margin: 0 0 0 -150px;
+            }
+
+            .nostril {
+                width: 50px;
+                height: 50px;
+                border: 4px solid #000;
+                border-radius: 50%;
+                position: absolute;
+                bottom: 70px;
+                right: 50px;
+            }
+
+            .nostril:first-child {
+                left: 50px;
+            }
+
+            .eye:first-child {
+                left: 80px;
+            }
+
+            .eye {
+                background: #fff;
+                width: 80px;
+                height: 80px;
+                border: 4px solid #000;
+                border-radius: 50%;
+                position: absolute;
+                right: 80px;
+                top: 80px;
+            }
+
+            .eyeball {
+                background: #000;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                position: absolute;
+                top: 25px;
+                right: 25px;
+            }
+
+            .ear.right {
+                right: 50%;
+                margin: 0 -205px 0 0;
+                left: auto;
+            }
+
+            .ear {
+                position: absolute;
+                bottom: 155px;
+                left: 50%;
+                margin: 0 0 0 -200px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 45px 120px 45px;
+                border-color: transparent transparent #000 transparent;
+                z-index: -1;
+            }
+
+            .ear:after {
+                position: absolute;
+                left: -39px;
+                top: 5px;
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 39px 116px 39px;
+                border-color: transparent transparent pink transparent;
+            }
+
+            .hand.right {
+                right: 50%;
+                left: auto;
+                margin: 0 -370px 0 0;
+            }
+
+            .hand {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 120px;
+                height: 60px;
+                margin: 0 0 0 -370px;
+            }
+
+            .finger:first-child {
+                left: 32px;
+            }
+
+            .finger {
+                position: absolute;
+                bottom: -70px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 45px 120px 45px;
+                border-color: transparent transparent #000 transparent;
+            }
+
+            .finger:after {
+                position: absolute;
+                left: -39px;
+                top: 5px;
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 39px 116px 39px;
+                border-color: transparent transparent pink transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <p>CSS Pig</p>
+            <div class="ear right"></div>
+            <div class="ear"></div>
+
+            <div class="hand">
+                <div class="finger"></div>
+                <div class="finger"></div>
+            </div>
+
+            <div class="hand right">
+                <div class="finger"></div>
+                <div class="finger"></div>
+            </div>
+
+            <div id="head">
+                <div class="eye">
+                    <div class="eyeball"></div>
+                </div>
+
+                <div class="eye">
+                    <div class="eyeball"></div>
+                </div>
+
+                <div id="nose">
+                    <div class="nostril"></div>
+                    <div class="nostril"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
