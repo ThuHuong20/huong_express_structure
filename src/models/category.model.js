@@ -1,4 +1,4 @@
-import { stat } from "@babel/core/lib/gensync-utils/fs";
+
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
@@ -35,7 +35,13 @@ module.exports = {
         try {
             let categories = await prisma.categories.findMany({
                 where:
-                    status == undefined ? {} : { status },
+                    status == undefined ? {
+                        deleted: false
+                    } :
+                        {
+                            status,
+                            deleted: false
+                        },
             })
             return {
                 status: true,
@@ -73,4 +79,5 @@ module.exports = {
         }
 
     },
+
 }

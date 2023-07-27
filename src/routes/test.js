@@ -26,7 +26,7 @@ import categoryModel from '../models/category.model'
 // })
 router.use('/', async (req, res) => {
     // console.log('da vao!', req.body);
-    let result = await categoryModel.update(1, { deleted: true })
+    let result = await categoryModel.readMany()
     console.log("🚀 ~ file: test.js:9 ~ router.post ~ result:", result)
 
 
